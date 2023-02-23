@@ -1,0 +1,12 @@
+#See https://aka.ms/containerfastmode to understand how Visual Studio uses this Dockerfile to build your images for faster debugging.
+
+FROM mcr.microsoft.com/mssql/server:2019-CU8-ubuntu-16.04
+
+WORKDIR /var/opt/mssql/data
+
+ENV SA_PASSWORD=Test2020*
+ENV ACCEPT_EULA=Y
+
+HEALTHCHECK --interval=20s  \
+	CMD /opt/mssql-tools/bin/sqlcmd -S . -U sa -P Test2020* \
+		-Q "CREATE DATABASE SurveyDb ON (FILENAME = '/var/opt/mssql/data/SurveyDb.mdf'),(FILENAME = '/var/opt/mssql/data/SurveyDb_log.ldf') FOR ATTACH"

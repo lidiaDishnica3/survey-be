@@ -1,0 +1,82 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>netcoreapp3.1</TargetFramework>
+		<UserSecretsId>aac34eb0-dd65-4f6e-a634-14d3df6da091</UserSecretsId>
+		<DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+		<DockerfileContext>.</DockerfileContext>
+		<DockerfileFile>..\Dockerfile</DockerfileFile>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Compile Remove="Migrations\20200916122510_ModificationEntities.cs" />
+		<Compile Remove="Migrations\20200916122510_ModificationEntities.Designer.cs" />
+		<Compile Remove="Migrations\20200916123930_ModificationEntiti2.cs" />
+		<Compile Remove="Migrations\20200916123930_ModificationEntiti2.Designer.cs" />
+		<Compile Remove="Migrations\20200916124025_ModificationEntities.cs" />
+		<Compile Remove="Migrations\20200916124025_ModificationEntities.Designer.cs" />
+		<Compile Remove="Migrations\20200916125856_Entities.cs" />
+		<Compile Remove="Migrations\20200916125856_Entities.Designer.cs" />
+		<Compile Remove="Migrations\20200916130345_Entitiesi.cs" />
+		<Compile Remove="Migrations\20200916130345_Entitiesi.Designer.cs" />
+		<Compile Remove="Migrations\20200916130508_Entities.cs" />
+		<Compile Remove="Migrations\20200916130508_Entities.Designer.cs" />
+		<Compile Remove="Migrations\20200916132436_Entities2.cs" />
+		<Compile Remove="Migrations\20200916132436_Entities2.Designer.cs" />
+		<Compile Remove="Migrations\20200916133232_Entities20.cs" />
+		<Compile Remove="Migrations\20200916133232_Entities20.Designer.cs" />
+		<Compile Remove="Migrations\20200916133306_Entities23.cs" />
+		<Compile Remove="Migrations\20200916133306_Entities23.Designer.cs" />
+		<Compile Remove="Migrations\20200916133421_Entities24.cs" />
+		<Compile Remove="Migrations\20200916133421_Entities24.Designer.cs" />
+		<Compile Remove="Migrations\20200916133541_Entities244.cs" />
+		<Compile Remove="Migrations\20200916133541_Entities244.Designer.cs" />
+		<Compile Remove="Migrations\20200916135537_SeedData.cs" />
+		<Compile Remove="Migrations\20200916135537_SeedData.Designer.cs" />
+		<Compile Remove="Migrations\20200917085407_addEntity.cs" />
+		<Compile Remove="Migrations\20200917085407_addEntity.Designer.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="AutoMapper" Version="10.0.0" />
+		<PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.0.1" />
+		<PackageReference Include="CoreKit.Connectivity.SMTP" Version="1.0.9" />
+		<PackageReference Include="Hangfire" Version="1.7.15" />
+		<PackageReference Include="Hangfire.Core" Version="1.7.15" />
+		<PackageReference Include="Hangfire.SqlServer" Version="1.7.15" />
+		<PackageReference Include="MailKit" Version="2.9.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.8" />
+		<PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.8" />
+		<PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.1.8" />
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.8" />
+		<PackageReference Include="Microsoft.AspNetCore.OData" Version="7.5.0" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.8" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Abstractions" Version="3.1.8" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Analyzers" Version="3.1.8" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.8">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="3.1.8" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.8" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.8">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.9" />
+		<PackageReference Include="MimeKit" Version="2.9.2" />
+		<PackageReference Include="Serilog.AspNetCore" Version="3.4.0" />
+		<PackageReference Include="Serilog.Settings.Configuration" Version="3.1.0" />
+		<PackageReference Include="Serilog.Sinks.Console" Version="3.1.1" />
+		<PackageReference Include="Serilog.Sinks.Seq" Version="4.0.0" />
+		<PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="5.6.1" />
+		<PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="5.6.1" />
+		<PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="5.6.1" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Folder Include="wwwroot\Images\" />
+	</ItemGroup>
+
+
+</Project>

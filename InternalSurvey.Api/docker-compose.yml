@@ -1,0 +1,30 @@
+version: "3"
+services:
+    web:
+        build:
+            context: .
+            dockerfile: Dockerfile-api
+        ports:
+            - "59791:80"            
+            - "44316:443"            
+        depends_on: 
+            - db
+        environment:
+          - ASPNETCORE_ENVIRONMENT=Docker
+          - ASPNETCORE_URLS=https://+:443;http://+:80
+          - ASPNETCORE_Kestrel__Certificates__Default__Password=Test2020*
+          - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/aspnetapp.pfx
+        volumes:
+          - ~/.aspnet/https:/https:ro
+          - ~/.aspnet/wwwroot:/app/wwwroot          
+    db: 
+        build:                     
+            context: .
+            dockerfile: Dockerfile-db
+        environment:             
+            ACCEPT_EULA: "Y"     
+            SA_PASSWORD: "Test2020*" 
+        volumes:                    
+          - ~/.aspnet/dbs:/var/opt/mssql/data
+        ports:
+          - "1444:1433"

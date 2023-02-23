@@ -1,0 +1,1 @@
+ /opt/mssql-tools/bin/sqlcmd -S "localhost,1433" -U sa -P Test2020* -Q "CREATE DATABASE SurveyDb ON (FILENAME = '/my_database/SurveyDb.mdf'),(FILENAME = '/my_database/SurveyDb_log.ldf') FOR ATTACH"
