@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
@@ -8,11 +7,9 @@ using InternalSurvey.Api.Dtos;
 using InternalSurvey.Api.Entities;
 using InternalSurvey.Api.Helpers;
 using InternalSurvey.Api.Interfaces;
-using Microsoft.AspNet.OData.Query;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.OData.Query;
 using Microsoft.Extensions.Logging;
 
 namespace InternalSurvey.Api.Controllers

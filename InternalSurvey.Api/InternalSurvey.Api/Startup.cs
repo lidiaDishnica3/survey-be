@@ -1,20 +1,15 @@
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using InternalSurvey.Api.Data;
 using InternalSurvey.Api.Interfaces;
 using InternalSurvey.Api.Repository;
 using InternalSurvey.Api.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Serilog;
 using AutoMapper;
 using InternalSurvey.Api.Automapper;
@@ -28,15 +23,15 @@ using InternalSurvey.Api.Helpers.Email;
 using Hangfire;
 using Hangfire.SqlServer;
 using Microsoft.AspNetCore.Mvc.Formatters;
-using Microsoft.AspNet.OData.Extensions;
 using Microsoft.Net.Http.Headers;
 using Microsoft.OData.Edm;
 using InternalSurvey.Api.Dtos;
-using Microsoft.AspNet.OData.Builder;
+using Microsoft.AspNetCore.OData;
+using Microsoft.OData.ModelBuilder;
 
 namespace InternalSurvey.Api
 {
-  public class Startup
+    public class Startup
   {
     public IConfiguration Configuration { get; }
     public Startup(IWebHostEnvironment env)
@@ -148,9 +143,10 @@ namespace InternalSurvey.Api
 
       IMapper mapper = mappingConfig.CreateMapper();
       services.AddSingleton(mapper);
+         services.AddControllers()
+             .AddOData(opt => opt.AddRouteComponents("api", GetEdmModel()));
 
-
-      services.AddOData();
+            //services.AddOData();
 
       services.AddMvcCore(options =>
       {
@@ -200,8 +196,8 @@ namespace InternalSurvey.Api
             name: "default",
             pattern: "{controller}/{action=Index}/{id?}");
 
-        endpoints.MapODataRoute("api", "api", GetEdmModel());
-        endpoints.EnableDependencyInjection();
+        //endpoints.MapODataRoute("api", "api", GetEdmModel());
+        //endpoints.EnableDependencyInjection();
       });
     }
 

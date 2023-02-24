@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
 	<PropertyGroup>
-		<TargetFramework>netcoreapp3.1</TargetFramework>
+		<TargetFramework>net6.0</TargetFramework>
 		<UserSecretsId>aac34eb0-dd65-4f6e-a634-14d3df6da091</UserSecretsId>
 		<DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
 		<DockerfileContext>.</DockerfileContext>
@@ -45,21 +45,23 @@
 		<PackageReference Include="Hangfire.Core" Version="1.7.15" />
 		<PackageReference Include="Hangfire.SqlServer" Version="1.7.15" />
 		<PackageReference Include="MailKit" Version="2.9.0" />
-		<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.8" />
-		<PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.8" />
-		<PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.1.8" />
-		<PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.8" />
-		<PackageReference Include="Microsoft.AspNetCore.OData" Version="7.5.0" />
-		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.8" />
-		<PackageReference Include="Microsoft.EntityFrameworkCore.Abstractions" Version="3.1.8" />
-		<PackageReference Include="Microsoft.EntityFrameworkCore.Analyzers" Version="3.1.8" />
-		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.8">
-			<PrivateAssets>all</PrivateAssets>
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="6.0.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="6.0.0" />
+		<PackageReference Include="Microsoft.AspNetCore.OData" Version="8.0.12" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.0" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Abstractions" Version="6.0.0" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Analyzers" Version="6.0.0" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.0">
+   
+
+      <PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
-		<PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="3.1.8" />
-		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.8" />
-		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.8">
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="6.0.0" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.0" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.0">
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
@@ -72,7 +74,9 @@
 		<PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="5.6.1" />
 		<PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="5.6.1" />
 		<PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="5.6.1" />
-	</ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.JsonPatch" Version="6.0.0" />
+
+  </ItemGroup>
 
 	<ItemGroup>
 		<Folder Include="wwwroot\Images\" />

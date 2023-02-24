@@ -1,10 +1,8 @@
 ﻿using AutoMapper;
 using InternalSurvey.Api.Dtos;
-using Microsoft.AspNet.OData.Query;
-using System;
+using Microsoft.AspNetCore.OData.Query;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace InternalSurvey.Api.Helpers
 {

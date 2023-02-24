@@ -10,11 +10,9 @@ using InternalSurvey.Api.Entities;
 using InternalSurvey.Api.Helpers;
 using InternalSurvey.Api.Helpers.Email.Interfaces;
 using InternalSurvey.Api.Interfaces;
-using InternalSurvey.Api.Repository;
-using InternalSurvey.Api.Services;
-using Microsoft.AspNet.OData.Query;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.OData.Query;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
@@ -22,7 +20,7 @@ using Microsoft.Extensions.Logging;
 
 namespace InternalSurvey.Api.Controllers
 {
-  [Route("api/[controller]")]
+    [Route("api/[controller]")]
   [ApiController]
   [Authorize]
   public class SurveyController : BaseController<SurveyController>
