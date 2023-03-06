@@ -13,7 +13,7 @@ variables:
   buildConfiguration: 'Release'
   
 steps:
-- script: dir InternalSurvey.API
+- script: dir InternalSurvey.Api
           dotnet build --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
 
