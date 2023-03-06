@@ -32,8 +32,8 @@ namespace InternalSurvey.Api.Helpers.Email.Services
                 var mimeMessage = new MimeMessage();
                 var builder = new BodyBuilder();
 
-                mimeMessage.From.Add(new MailboxAddress(_email.Sender));
-                mimeMessage.To.Add(new MailboxAddress(email));
+                mimeMessage.From.Add(new MailboxAddress(_email.Sender,email));
+                mimeMessage.To.Add(new MailboxAddress(email,email));
                 mimeMessage.Subject = subject;
                 builder.HtmlBody = message;
                 mimeMessage.Body = builder.ToMessageBody();

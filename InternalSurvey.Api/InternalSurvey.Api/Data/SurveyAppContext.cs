@@ -29,5 +29,6 @@ namespace InternalSurvey.Api.Data
       modelBuilder.Seed();
 
     }
+
   }
 }
